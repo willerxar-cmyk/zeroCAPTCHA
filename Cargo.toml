@@ -1,0 +1,59 @@
+[package]
+name = "zerocaptcha"
+version = "0.1.0"
+authors = ["Willer Xavier Reis", "SID6"]
+edition = "2024"
+rust-version = "1.96"
+description = "zeroCAPTCHA self-hosted proof-of-work CAPTCHA"
+license-file = "LICENSE"
+
+# Cargo treats this directory as its own workspace for standalone builds.
+[workspace]
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "fs", "io-util", "sync", "time", "net"] }
+axum = { version = "0.8", features = ["http1", "json", "tokio"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+hmac = "0.12"
+sha2 = "0.10"
+pbkdf2 = "0.12"
+hex = "0.4"
+subtle = "2"
+base64 = "0.22"
+uuid = { version = "1", features = ["v7"] }
+rand = "0.8"
+governor = "0.10"
+thiserror = "2"
+async-trait = "0.1"
+
+[features]
+default = []
+# Optional built-in KDFs and shared single-use storage.
+argon2 = ["dep:argon2"]
+scrypt = ["dep:scrypt"]
+redis = ["dep:redis"]
+
+[dependencies.argon2]
+version = "0.5"
+optional = true
+
+[dependencies.scrypt]
+version = "0.11"
+optional = true
+
+[dependencies.redis]
+version = "1"
+# `connection-manager` (implies `aio`) provides `aio::ConnectionManager` +
+# `Client::get_connection_manager`, the auto-reconnecting handle we use.
+features = ["connection-manager", "tokio-comp"]
+optional = true
+
+[dev-dependencies]
+# Integration tests exercise the real HTTP surface in-process (no network):
+# `tower`'s ServiceExt::oneshot drives the router, `http-body-util` reads the
+# response body as bytes.
+tower = { version = "0.5", features = ["util"] }
+http-body-util = "0.1"

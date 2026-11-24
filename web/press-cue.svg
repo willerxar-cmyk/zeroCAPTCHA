@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -6 96 100" width="96" height="100" fill="none" stroke="#172729" stroke-linecap="round" stroke-linejoin="round">
+  <!-- zeroCAPTCHA © 2026 Willer Xavier Reis and SID6. See LICENSE. -->
+  <rect x="24" y="80" width="48" height="8" rx="4" fill="#f4f8f7" stroke="#168e7e" stroke-width="2.5"/>
+  <rect x="35" y="73" width="26" height="8" rx="3" fill="#168e7e" stroke-width="2.4"/>
+  <g transform="translate(0 -4)">
+    <path d="M43 42 L43 66 A5 5 0 0 0 53 66 L53 49 Q53 54 58 54 Q63 54 63 49 Q63 53 67.5 53 Q72 53 72 48.5 Q72 52 75.5 52 Q79 52 79 47.5 L79 31 Q79 21 71 18 L71 9 L50 9 L50 18 Q44 20 40 26 L32.5 33.5 Q28.5 38.5 32 42.5 Q35.5 46 39.5 43 Z" fill="#f4f8f7" stroke-width="2.6"/>
+    <path d="M63 49 L63 41 M72 48.5 L72 41 M39.5 43 Q43 38 48 38 M45.5 66.5 Q48 69 50.5 66.5" stroke-width="2"/>
+    <rect x="48" y="3" width="25" height="8" rx="2.5" fill="#168e7e" stroke-width="2.4"/>
+  </g>
+</svg>

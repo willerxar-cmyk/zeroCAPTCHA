@@ -1,0 +1,14 @@
+zeroCAPTCHA
+Copyright (c) 2026 Willer Xavier Reis and SID6
+
+Developed by Willer Xavier Reis and SID6.
+Willer Xavier Reis: https://www.linkedin.com/in/willerxar/
+SID6: https://sid6.com/
+
+This standalone edition adapts the original Rust engine and browser solver.
+It uses a separate signing domain and includes an independent browser widget
+and integration example. The widget includes the original hand illustration.
+See LICENSE for the redistribution and attribution conditions.
+
+Keep this credit visible in or immediately next to the CAPTCHA:
+zeroCAPTCHA © 2026 Willer Xavier Reis and SID6

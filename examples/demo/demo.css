@@ -1,0 +1,22 @@
+:root {
+  color-scheme: light dark;
+  font: 1rem/1.55 system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: clamp(1rem, 5vw, 2rem);
+}
+
+main {
+  max-width: 34rem;
+  margin: clamp(2rem, 12vh, 7rem) auto;
+}
+
+h1 {
+  line-height: 1.15;
+}
+
+zero-captcha {
+  margin-top: 1.5rem;
+}
